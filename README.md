@@ -1,4 +1,4 @@
-# AI Manga & Comics Reader Platform
+# Manga-World · AI Manga & Comics Reader Platform
 
 Mobile-first PWA (React + Vite) and Node.js (Express + MongoDB) stack with JWT auth, Stripe-ready billing, Cloudinary-or-local media, OpenAI hooks for translation/metadata/recommendations, ZIP bulk ingest, and precise reading progress.
 
