@@ -1,0 +1,115 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 45;
+  padding-top: env(safe-area-inset-top, 0px);
+  background: linear-gradient(180deg, rgba(10, 12, 18, 0.92) 0%, rgba(10, 12, 18, 0.78) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.top-bar-inner {
+  max-width: var(--shell-max);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 8px 16px 10px;
+}
+
+.top-bar-brand {
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.top-bar-lang {
+  display: flex;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.tb-chip {
+  min-width: 36px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+
+.tb-chip.active {
+  color: #dce4ff;
+  border-color: rgba(107, 138, 253, 0.35);
+  background: rgba(107, 138, 253, 0.12);
+}
+
+.top-bar-auth {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.top-bar-user {
+  max-width: 88px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.tb-btn {
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tb-btn--primary {
+  background: linear-gradient(135deg, #3d9d91 0%, #5a7aef 55%, #6b52d8 100%);
+  color: #f4f6fb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.tb-btn--ghost {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+}
+
+[data-theme="light"] .top-bar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 249, 252, 0.9) 100%);
+  border-bottom-color: rgba(22, 26, 38, 0.08);
+}
+
+[data-theme="light"] .tb-chip.active {
+  color: #2f3f6e;
+  background: rgba(107, 138, 253, 0.14);
+}
+
+[data-theme="light"] .tb-chip:not(.active) {
+  color: #3d4560;
+  background: rgba(22, 26, 38, 0.06);
+  border-color: rgba(22, 26, 38, 0.12);
+}
+
+[data-theme="light"] .top-bar-user {
+  color: #4a5168;
+}
