@@ -42,7 +42,7 @@ export default function Login() {
           {t("auth.login")}
         </button>
       </form>
-      <Link to="/register">{t("auth.register")}</Link>
+      <Link to={`/register?next=${encodeURIComponent(nextPath)}`}>{t("auth.register")}</Link>
       </div>
     </>
   );

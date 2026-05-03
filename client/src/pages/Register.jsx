@@ -44,7 +44,7 @@ export default function Register() {
           {t("auth.register")}
         </button>
       </form>
-      <Link to="/login">{t("auth.login")}</Link>
+      <Link to={`/login?next=${encodeURIComponent(nextPath)}`}>{t("auth.login")}</Link>
       </div>
     </>
   );

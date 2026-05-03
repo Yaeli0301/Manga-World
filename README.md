@@ -69,6 +69,7 @@ Set `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, `STRIPE_PRICE_PREMIUM` (recurr
 - **Renewal reminders:** Turn on **customer billing emails** in the Stripe Dashboard so Stripe emails upcoming invoices / failures before or after charges (no in-app email server is required for that path).
 - **Billing portal:** After the first Checkout, the user gets `hasBillingCustomer` and can open **Manage billing** (`POST /api/payment/portal`) to update cards or cancel.
 - **Dev only:** `POST /api/payment/mock-subscribe` still exists when `NODE_ENV !== "production"` for local QA without Stripe.
+- **Customer / subscription management:** Use **[Stripe Dashboard → Customers](https://dashboard.stripe.com/customers)** (invoices, payment methods, subscription status). To manage sales leads and pipelines, connect Stripe to your CRM (**HubSpot**, **Zoho**, **Pipedrive**, etc.) via **Zapier** / **Make** / native Stripe integrations—this app does **not** include a replacement CRM.
 
 ## Media storage priority
 

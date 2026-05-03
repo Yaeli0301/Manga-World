@@ -103,6 +103,7 @@ export async function webhook(req, res, next) {
     if (event.type === "checkout.session.completed") {
       const session = event.data.object;
       const userId = session.metadata?.userId || session.client_reference_id;
+
       if (userId && session.mode === "subscription") {
         const user = await User.findById(userId);
         if (user) {
