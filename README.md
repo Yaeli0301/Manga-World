@@ -42,6 +42,11 @@ From the repo root:
 - API: `http://localhost:4000`
 - Client: `http://localhost:5173` (proxies `/api` and `/uploads` to the API)
 
+### שיתוף זמני לאינטרנט (LocalTunnel)
+
+מהשורש: `npm run share` — מריץ יחד `dev` ומנהרה ציבורית ל־Vite. אחרי עלייה, בטרמינל יופיע `your url is: https://….loca.lt` — זה הקישור להעביר לאנשים.  
+**חשוב:** המחשב חייב להישאר דלוק; MongoDB חייב לרוץ; בפעם הראשונה לפעמים מופיעה בקשת אישור IP בדף של LocalTunnel (לחצי Continue).
+
 ## Run (production-style)
 
 - Build client: `npm run build -w client`

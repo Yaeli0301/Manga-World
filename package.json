@@ -13,11 +13,15 @@
     "dev:server": "npm run dev -w server",
     "dev:client": "npm run dev -w client",
     "build": "npm run build -w client",
+    "tunnel": "wait-on tcp:5173 tcp:4000 && lt --port 5173",
+    "share": "concurrently -k -n dev,tunnel -c blue,magenta \"npm run dev\" \"npm run tunnel\"",
     "test": "npm run test -w server && npm run test -w client",
     "test:server": "npm run test -w server",
     "test:client": "npm run test -w client"
   },
   "devDependencies": {
-    "concurrently": "^9.1.2"
+    "concurrently": "^9.1.2",
+    "localtunnel": "^2.0.2",
+    "wait-on": "^8.0.1"
   }
 }
