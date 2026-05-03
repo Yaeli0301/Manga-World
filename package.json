@@ -23,5 +23,8 @@
     "concurrently": "^9.1.2",
     "localtunnel": "^2.0.2",
     "wait-on": "^8.0.1"
+  },
+  "dependencies": {
+    "serverless-http": "^3.2.0"
   }
 }

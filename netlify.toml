@@ -1,0 +1,37 @@
+[build]
+  command = "npm run build"
+  publish = "client/dist"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  included_files = ["server/src/**"]
+  external_node_modules = [
+    "mongoose",
+    "bcryptjs",
+    "jsonwebtoken",
+    "express",
+    "cors",
+    "helmet",
+    "morgan",
+    "express-rate-limit",
+    "multer",
+    "sharp",
+    "graphql",
+    "graphql-yoga",
+    "@graphql-tools/schema",
+    "openai",
+    "stripe",
+    "cloudinary",
+    "@aws-sdk/client-s3",
+    "ioredis",
+    "adm-zip",
+    "uuid",
+    "serverless-http",
+    "dotenv"
+  ]
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
