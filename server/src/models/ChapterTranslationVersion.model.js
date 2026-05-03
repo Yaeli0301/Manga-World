@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const chapterTranslationVersionSchema = new mongoose.Schema(
   {
-    chapterId: { type: mongoose.Schema.Types.ObjectId, ref: "Chapter", required: true, index: true },
+    chapterId: { type: mongoose.Schema.Types.ObjectId, ref: "Chapter", required: true },
     mangaId: { type: mongoose.Schema.Types.ObjectId, ref: "Manga", required: true, index: true },
     label: { type: String, enum: ["draft_save", "submitted", "published"], required: true },
     title: { type: String, default: "" },

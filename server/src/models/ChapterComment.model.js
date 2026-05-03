@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const chapterCommentSchema = new mongoose.Schema(
   {
-    chapterId: { type: mongoose.Schema.Types.ObjectId, ref: "Chapter", required: true, index: true },
+    chapterId: { type: mongoose.Schema.Types.ObjectId, ref: "Chapter", required: true },
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
     body: { type: String, required: true, trim: true, maxlength: 4000 },
     /** User IDs who liked (capped uniqueness via $addToSet in controller). */
